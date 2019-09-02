@@ -1,0 +1,126 @@
+body {
+    margin:0;
+    padding:0;
+}
+
+.page-container {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* navigation bar, elements in javascript.js */
+
+.navigation-container {
+    height:50px;
+    background-color:rgba(230, 234, 255,1);
+    padding:10px;
+    display:flex;
+    align-items:center;
+    border-bottom:solid black 1px;
+    box-shadow:0px 0px 3px 3px rgb(220,220,220);
+}
+
+.nav-list {
+    margin:0;
+    padding:0;
+}
+
+.nav-list li {
+    display:inline;
+    margin-left:15px;
+    padding:5px;
+}
+
+.nav-list li:hover {
+    background-color:black;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+.nav-button {
+    color:black;
+}
+
+.nav-button:hover {
+    text-decoration:none;
+    color:black;
+}
+
+/* Multiple page styles  */ 
+
+.list {
+    padding:0;
+    margin:20px;
+    list-style:none;
+}
+
+.link {
+    font-size:5px;
+    color:purple;
+}
+
+.var {
+    color:red;
+}
+
+.fixed-height {
+    height:80px;
+}
+
+.top-border {
+    border-top:solid gray 1px;
+}
+
+.hide {
+    display:none;
+}
+.highlight {
+    background-color:rgba(0,0,255,0.2);
+}
+
+.method {
+    color:red;
+}
+
+.javascript {
+    color:orange;
+}
+
+.background-image {
+    background-image:url('../images/dock.jpeg');
+    width:450px;
+    height:450px;
+}
+
+/* Layout  */
+
+.background-title {
+    background-color:rgba(237, 248, 255,0.6);
+    border-top:solid rgb(150,150,150) 1px;
+    border-bottom:solid rgb(150,150,150) 1px;
+}
+
+.background-content-one {
+    background-color:rgba(237, 248, 255,0.1);
+    box-shadow:1.5px 1.5px 3px 3px rgb(230,230,230);
+    border-radius:4px;
+    height:100%;
+    padding:20px;
+}
+
+.background-content-two {
+    border:solid lightgray 1px;
+    background-color:rgba(237, 248, 255,0.4);
+    border-radius:4px;
+    height:100%;
+    padding:20px;
+}
+
+.background-content-three {
+    border:solid lightgray 1px;
+    background-color:white;
+    border-radius:4px;
+    height:100%;
+    padding:20px;
+}
+

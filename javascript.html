@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.min.css" type="text/css" />
+
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <title>Code Institute Work (javascript)</title>
+</head>
+
+<body>
+
+    <div id="navigation-bar-js"></div>
+
+
+
+    <h2 class="text-center p-5 m-0 background-title mb-2 mt-5">Javascript</h2>
+
+
+
+
+    <div class="row m-0 p-0">
+        <section class="col-sm-12 col-lg-6 m-0 p-2">
+            <div class="background-content-one">
+                <h5 class="mb-4 text-center">Different variables types</h5>
+
+                <dl class="list text-sm-center text-lg-left">
+                    <dt>String</dt>
+                    <dd>'Words'</dd>
+                    <dt>Float</dt>
+                    <dd>A number with a decimal 0.52</dd>
+                    <dt>Integer</dt>
+                    <dd>A hole number 58</dd>
+                    <dt>Boolean</dt>
+                    <dd>True/False</dd>
+                    <dt>Array</dt>
+                    <dd>[item1, item2]</dd>
+                </dl>
+            </div>
+        </section>
+        <section class="col-sm-12 col-lg-6 m-0 p-2">
+            <div class="background-content-two">
+                <h5 class="mb-4 text-center">Useful CDN's</h5>
+                <dl class="list text-sm-center text-lg-left">
+                    <dt>JQuery</dt>
+                    <dd class="link"><span>></span>script src="https://code.jquery.com/jquery-3.4.1.js"
+                        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"><span>
+                            <</span>/script> </dd> <dt>SVG</dt>
+                    <dt>DC.css</dt>
+                    <dd class="link"><span>
+                            <</span>link rel="stylesheet"
+                                href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.min.css" type="text/css" />
+                    </dd>
+                    <dt>D3</dt>
+                    <dd class="link"><span>
+                            <</span>script type="text/javascript"
+                                src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js">
+                                <span>
+                                    <</span>/script> </dd> <dt>Crossfilter</dt>
+                    <dd class="link"><span>
+                            <</span>script type="text/javascript"
+                                src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js">
+                                <span>
+                                    <</span>/script> </dd> <dt>DC</dt>
+                    <dd class="link"><span>
+                            <</span>script type="text/javascript"
+                                src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js">
+                                <span>
+                                    <</span>/script> </dd> </dl> </section> </div> <div class="row p-0 m-0 mt-3">
+                                        <div class="offset-1 col-2">
+                                            <h4>String</h4>
+                                        </div>
+                                        <div class="col-2">
+                                            <h4>Float</h4>
+                                            <dl>
+                                                <dt class="method">parseInt()</dt>
+                                                <dd>This will convert a float into a integer.</dd>
+                                            </dl>
+                                        </div>
+                                        <div class="col-2">
+                                            <h4>Integer</h4>
+                                            <dl>
+                                                <dt class="method">parseFloat()</dt>
+                                                <dd>This will convert a value into a float.</dd>
+                                            </dl>
+                                        </div>
+                                        <div class="col-2">
+                                            <h4>Boolean</h4>
+                                        </div>
+                                        <div class="col-2">
+                                            <h4>Array</h4>
+                                            <dl class="list">
+                                                <dt>arrayVariable[0]</dt>
+                                                <dd>This will target the first array item in a list. [2] will target the
+                                                    third.</dd>
+                                            </dl>
+                                        </div>
+            </div>
+    </div>
+
+    <div class="row m-0 p-0">
+        <div class="col-lg-6 col-sm-12 m-0 p-2">
+            <div class="background-content-one">
+                <h5>Displaying the colour of the blocks</h5>
+                <div class="display-colour text-center">rgb(0,0,0)</div>
+                <div class="row m-0 p-2">
+                    <div class="col-3 bg-primary fixed-height colour-block"></div>
+                    <div class="col-3 bg-warning fixed-height colour-block"></div>
+                    <div class="col-3 bg-secondary fixed-height colour-block"></div>
+                    <div class="col-3 bg-success fixed-height colour-block"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $('.colour-block').on('click', function () {
+                var colour = $(this).css('background-color');
+                $('.display-colour').text(colour);
+            })
+        </script>
+        <div class="col-lg-6 col-sm-12 m-0 p-2">
+            <div class="background-content-two">
+                <h5>Math.<span class="method">random()</span></h5>
+                <div id="math-here"></div>
+                <button onclick="random()">Change Number</button>
+                <script>
+                    function random() {
+                        var value = Math.random() * 100;
+                        $('#math-here').text(parseInt(value));
+                    }
+                    random();
+                </script>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="row m-0 mt-4 p-0">
+        <div class="col-12 m-0 p-0">
+            <h3 class="mb-2 mt-5 text-center background-title m-0 p-5">Manipulating elements</h3>
+        </div>
+    </div>
+    <div class="row m-0 p-0">
+        <div class="col-sm-12 col-lg-6 m-0 p-2">
+            <div class="background-content-one">
+                <div class="m-0 p-0">
+                    <div class="fixed-height">
+                        <button class="expand-button">Expand</button>
+                        <p class="hide">This type of expand uses the relationship between the <b>p</b> element and the
+                            <b>button</b> element</p>
+                    </div>
+                    <div class="fixed-height">
+                        <button class="expand-button">Expand</button>
+                        <p class="hide">This is the same bit of javascript code and only one <b>p</b> element is
+                            affected.
+                            This is
+                            because i have used the 'this' keyword.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $('.expand-button').on('click', function () {
+                $(this).next('p').slideToggle('slow');
+            })
+        </script>
+        <div class="col-sm-12 col-lg-6 m-0 p-0">
+            <div class="row m-0 p-2">
+                <div class="background-content-two">
+                    <div class="row m-0 p-0">
+                        <div class="col-4 m-0 p-3">
+                            <h5>Group 1</h5>
+                            <button class="group-button" id="group1">Click Me</button>
+                            <p class="group1-text">This way of targeting the <b>p</b> Elements is useful if yu have a
+                                group
+                                with
+                                more than one element in.</p>
+                        </div>
+                        <div class="col-4 m-0 p-3">
+                            <h5>Group 2</h5>
+                            <button class="group-button" id="group2">Click Me</button>
+                            <p class="group2-text">This</p>
+                            <p class="group2-text">Is three</p>
+                            <p class="group2-text"><b>p</b> elements</p>
+                        </div>
+                        <div class="col-4 m-0 p-3">
+                            <h5>Group 3</h5>
+                            <button class="group-button" id="group3">Click Me</button>
+                            <p class="group3-text">1</p>
+                            <p class="group3-text">2</p>
+                            <p class="group3-text">3</p>
+                            <p class="group3-text">4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.group-button').on('click', function () {
+            var target = '.'.concat(this.id, '-text')
+            $(target).toggleClass('highlight');
+        })
+    </script>
+
+    <div class="row m-0 p-0 background-title mb-2 my-5">
+        <div class="col-12 m-0 p-5">
+            <h3 class="text-center">Visualising data</h3>
+        </div>
+    </div>
+
+    <div class="row m-0 p-0">
+        <div class="col-sm-12 col-lg-6 m-0 p-2">
+            <div class="background-content-one">
+                <h3>SVG d3</h3>
+                <div id="draw-here"></div>
+                <script>
+                    var h = 500;
+                    var w = 500;
+                    var barPadding = 1;
+
+                    var dataset = [
+                        450, 100, 100, 600, 500, 25, 350, 120, 80, 130,
+                        110, 102, 375, 200, 175, 168, 180, 230, 205,
+                    ];
+
+                    var colWidth = w / dataset.length;
+                    var barWidth = colWidth - barPadding;
+
+                    var svg = d3.select('#draw-here')      //target the html element
+                        .append('svg')                     //create a svg
+                        .attr('height', h)                 //create a height attribute and declare it by the variable h
+                        .attr('width', w);                 //creat a width attribute and declare it by the variable w
+
+                    svg.selectAll('rect')                  //select all the rectangles 
+                        .data(dataset)                     //get the data from the array dataset
+                        .enter()                           //join the data to 
+                        .append('rect')                    //this append which is a rect
+                        .attr('x', function (d, i) {       // the x is the index mulitiplied by the width / how many items are in the array
+                            return i * colWidth;
+                        })
+                        .attr('y', function (d) {
+                            return h - d;
+                        })
+                        .attr('height', function (d) {
+                            return d;
+                        })
+                        .attr('width', barWidth);
+
+                    svg.selectAll('text')
+                        .data(dataset)
+                        .enter()
+                        .append('text')
+                        .text(function (d) {
+                            return d;
+                        })
+                        .attr('text-anchor', 'middle')
+                        .attr('x', function (d, i) {
+                            return i * colWidth + barWidth / 2
+                        })
+                        .attr('y', function (d) {
+                            return h - d + 14;
+                        })
+                        .attr('font-family', 'sans serif')
+                        .attr('font-size', '11px')
+                        .attr('fill', 'white')
+                </script>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-6 p-2">
+            <div class="background-content-two">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil impedit magni provident aliquid
+                    repellendus exercitationem voluptas voluptate sequi, eaque, ratione cupiditate error dolore,
+                    corrupti
+                    aliquam ipsam libero! Ab, hic. Qui!</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row m-0 p-0">
+
+        <div class="col-lg-6 col-sm-12 text-sm-center text-lg-left m-0 p-3 border">
+            <h5>Domain and scale</h5>
+            <script>
+                var scale = d3.scale.linear()
+                    .domain([0, 500])
+                    .range([0, 400]);
+                console.log('scale ' + scale(0));
+                console.log('scale ' + scale(400));
+                console.log('scale ' + scale(500));
+            </script>
+            <p>This test is logged in the console (f12) <span class="javascript">.domain([0, 500])</span> If the
+                <span class="javascript">scale(400)</span> was set to 400 the result would be 0.8 because
+                400 is 0.8 of 500. We can also use a <span class="javascript">range([0,400])</span> this will set
+                the
+                max value to 400px so 500 would be 400px and 400 would be 320px. We can also set the <span
+                    class="javascript">range([0,h])</span> h being a variable 'height' so that we dont have to hard
+                code
+                it. Same with the <span class="javascript">domain([0, d3.max(dataset)])</span></p>
+        </div>
+        <div class="col-sm-12 col-lg-6 m-0 p-4 background-content">
+            <h3>SVG d3</h3>
+            <div id="draw-here2"></div>
+            <script>
+                var h = 350;
+                var w = 500;
+                var barPadding = 1;
+
+                var dataset = [
+                    450, 100, 100, 600, 500, 25, 350, 120, 80, 130,
+                    110, 102, 375, 200, 175, 168, 180, 230, 205,
+                ];
+
+                var scale = d3.scale.linear()
+                    .domain([0, d3.max(dataset)])
+                    .range([0, h]);
+
+                var colWidth = w / dataset.length;
+                var barWidth = colWidth - barPadding;
+
+                var svg = d3.select('#draw-here2')      //target the html element
+                    .append('svg')                     //create a svg
+                    .attr('height', h)                 //create a height attribute and declare it by the variable h
+                    .attr('width', w);                 //creat a width attribute and declare it by the variable w
+
+                svg.selectAll('rect')                  //select all the rectangles 
+                    .data(dataset)                     //get the data from the array dataset
+                    .enter()                           //join the data to 
+                    .append('rect')                    //this append which is a rect
+                    .attr('x', function (d, i) {       // the x is the index mulitiplied by the width / how many items are in the array
+                        return i * colWidth;
+                    })
+                    .attr('y', function (d) {
+                        return h - scale(d);
+                    })
+                    .attr('height', function (d) {
+                        return scale(d);
+                    })
+                    .attr('width', barWidth);
+
+                svg.selectAll('text')
+                    .data(dataset)
+                    .enter()
+                    .append('text')
+                    .text(function (d) {
+                        return d;
+                    })
+                    .attr('text-anchor', 'middle')
+                    .attr('x', function (d, i) {
+                        return i * colWidth + barWidth / 2
+                    })
+                    .attr('y', function (d) {
+                        return h - scale(d) + 14;
+                    })
+                    .attr('font-family', 'sans serif')
+                    .attr('font-size', '11px')
+                    .attr('fill', 'white')
+            </script>
+        </div>
+    </div>
+
+
+    <div class="row m-0 p-0">
+        <div class="col-12">
+            <hr>
+            <button onclick="change_data()">Change Data</button>
+            <button onclick="filter_data()">Filtered Data</button>
+            <input type=text id="filter_value" placeholder="Minimum required (100)" />
+            <div id="draw-here3"></div>
+
+            <script>
+
+                // Size of Chart
+                var w = 500;
+                var h = 500;
+                var barPadding = 1;
+                var numberOfBars = 19;
+
+                // Useful Variables
+                var colWidth = w / numberOfBars;
+                var barWidth = colWidth - barPadding;
+                // Create an SVG element
+                var svg = d3.select("#draw-here3")
+                    .append("svg")
+                    .attr("width", w)
+                    .attr("height", h);
+                // First Call to change_data will plot the initial chart
+                change_data();
+                // Generates a Random set of data and plots it as a bar chart
+                // Called once on page load, then each time the button is clicked.
+                function change_data() {
+                    var data = generate_random_data(numberOfBars);
+                    plot_data(data);
+                }
+
+                // Generates a Random set of data and plots it as a bar chart
+                // Called once on page load, then each time the button is clicked.
+                function filter_data() {
+                    var data = generate_random_data(numberOfBars);
+                    data = data.filter(function (d) { return d >= get_filter_value(); });
+                    plot_data(data);
+                }
+
+
+                function plot_data(data) {
+                    // Bind the data to the collections of rectangles and text in the svg element
+                    var bars = svg.selectAll("rect")
+                        .data(data);
+                    var labels = svg.selectAll("text")
+                        .data(data);
+
+                    // Remove any unneeded rectangles and labels (if new data has less items than the existing chart)
+                    bars.exit().remove();
+                    labels.exit().remove();
+                    // Append any new rectangles and labels that are needed (if new data has more items than existing chart)
+                    create_bars(bars);
+                    create_labels(labels);
+                    // There should now be the right number of rectangles and labels. 
+                    // Resize and position each one according to the new data items.
+                    resize_bars(bars, data);
+                    position_labels(labels, data);
+                }
+                function create_bars(bars) {
+                    bars.enter()
+                        .append("rect");
+                }
+
+                function resize_bars(bars, data) {
+                    bars.transition()
+                        .duration(500)
+                        .attr("x", function (d, i) {
+                            return i * colWidth;
+                        })
+                        .attr("y", function (d) {
+                            return h - d;
+                        })
+                        .attr("width", barWidth)
+                        .attr("height", function (d) {
+                            return d;
+                        });
+                }
+
+                function create_labels(labels) {
+                    labels.enter()
+                        .append("text")
+                        .attr("text-anchor", "middle")
+                        .attr("font-family", "sans-serif")
+                        .attr("font-size", "11px")
+                        .attr("fill", "white");
+                }
+
+                function position_labels(labels, data) {
+                    labels.transition()
+                        .duration(500)
+                        .text(function (d) {
+                            return d;
+                        })
+                        .attr("x", function (d, i) {
+                            return i * colWidth + barWidth / 2;
+                        })
+                        .attr("y", function (d) {
+                            return h - d + 14;
+                        });
+                }
+
+                function generate_random_data(n) {
+                    data = [];
+
+                    for (i = 0; i < n; i++) {
+                        var value = Math.floor((Math.random() * 500) + 1);
+                        data.push(value);
+                    }
+                    return data;
+                }
+
+                function get_filter_value() {
+                    var value = null;
+                    var x = document.getElementById("filter_value").value;
+                    value = parseInt(x);
+                    if (isNaN(value))
+                        value = 100;
+
+                    return value;
+                }
+
+            </script>
+        </div>
+    </div>
+
+
+    <div class="row m-0 mb-2 mt-5 p-0">
+        <div class="col-12 p-5 background-title m-0">
+            <h3 class="text-center">Crossfilter - Dc (Dimensional charting)</h3>
+            <h6 class="text-center text-secondary m-0 p-0">You have to add the cdns is the correct order 1.d3
+                2.crossfilter
+                then 3.dc</h6>
+            <h6 class="text-center text-secondary m-0 p-0">More cdns to make making chats easier.</h6>
+        </div>
+    </div>
+
+
+    <div class="row m-0 p-0">
+
+        <div class="col-sm-6 col-lg-4 m-0 p-2">
+            <div class="background-content-two">
+                <h3>Total Spend Per Person</h3>
+                <div id="per-person-chart"></div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 m-0 p-2">
+            <div class="background-content-one">
+                <h3>Total Spend Per Store</h3>
+                <div id="per-store-chart"></div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-lg-4 m-0 p-2">
+            <div class="background-content-two">
+                <h3>Total Spend Per State</h3>
+                <div id="per-state-chart"></div>
+            </div>
+        </div>
+
+        <script>
+            var transactionsData = [
+                { "name": "Tom", "store": "Acme", "state": "NY", "spend": 100 },
+                { "name": "Tom", "store": "Big Co.", "state": "NY", "spend": 200 },
+                { "name": "Bob", "store": "Acme", "state": "FL", "spend": 150 },
+                { "name": "Bob", "store": "Acme", "state": "NY", "spend": 200 },
+                { "name": "Bob", "store": "Big Co.", "state": "FL", "spend": 50 },
+                { "name": "Bob", "store": "Big Co.", "state": "NY", "spend": 75 },
+                { "name": "Alice", "store": "Acme", "state": "FL", "spend": 200 },
+                { "name": "Alice", "store": "Big Co.", "state": "NY", "spend": 350 },
+            ];
+            var ndx = crossfilter(transactionsData);
+            var name_dim = ndx.dimension(dc.pluck('name'));
+            var total_spend_per_person = name_dim.group().reduceSum(dc.pluck('spend'));
+            dc.barChart('#per-person-chart')
+                .width(300)
+                .height(150)
+                .margins({ top: 10, right: 50, bottom: 30, left: 50 })
+                .dimension(name_dim)
+                .group(total_spend_per_person)
+                .transitionDuration(500)
+                .x(d3.scale.ordinal())
+                .xUnits(dc.units.ordinal)
+                .xAxisLabel("Person")
+                .yAxis().ticks(4);
+
+            var store_dim = ndx.dimension(dc.pluck('store'));
+            var total_spend_per_store = store_dim.group().reduceSum(dc.pluck('spend'));
+            dc.barChart('#per-store-chart')
+                .width(300)
+                .height(150)
+                .margins({ top: 10, right: 50, bottom: 30, left: 50 })
+                .dimension(name_dim)
+                .group(total_spend_per_store)
+                .transitionDuration(500)
+                .x(d3.scale.ordinal())
+                .xUnits(dc.units.ordinal)
+                .xAxisLabel("Store")
+                .yAxis().ticks(4);
+
+            var state_dim = ndx.dimension(dc.pluck('state'));
+            var total_spend_per_state = state_dim.group().reduceSum(dc.pluck('spend'));
+            dc.barChart('#per-state-chart')
+                .width(300)
+                .height(150)
+                .margins({ top: 10, right: 50, bottom: 30, left: 50 })
+                .dimension(name_dim)
+                .group(total_spend_per_state)
+                .transitionDuration(500)
+                .x(d3.scale.ordinal())
+                .xUnits(dc.units.ordinal)
+                .xAxisLabel("State")
+                .yAxis().ticks(4);
+
+            dc.renderAll();
+
+        </script>
+
+    </div>
+
+    <div class="row m-0 p-0">
+        <div class="col-12">
+
+            <h4>Pull data from an external source</h4>
+            <h6 class="text-secondary">Data base or an api (Application Programming Interface)</h6>
+        </div>
+    </div>
+
+    <div class="row p-0 m-0">
+        <h3>Total spend per person</h3>
+        <div id="per-person-chart-external-file"></div>
+    </div>
+
+    <script>
+
+        queue()
+            .defer(d3.json, "assets/data/transactions.json")
+            .await(makeGraphs);
+
+        function makeGraphs(error, transactionsData) {
+            var ndx = crossfilter(transactionsData);
+            var name_dim = ndx.dimension(dc.pluck('name'))
+            var total_spend_per_person = name_dim.group().reduceSum(dc.pluck('spend'));
+            dc.barChart("#per-person-chart-external-file")
+                .width(300)
+                .height(150)
+                .margins({ top: 10, right: 50, bottom: 30, left: 50 })
+                .dimension(name_dim)
+                .group(total_spend_per_person)
+                .transitionDuration(500)
+                .x(d3.scale.ordinal())
+                .xUnits(dc.units.ordinal)
+                .xAxisLabel("Person")
+                .yAxis().ticks(4);
+
+            dc.renderAll();
+        }
+
+    </script>
+
+
+
+    <div class="row m-0 p-0">
+        <div class="col-12 p-5 m-0 mb-2 mt-5 background-title">
+            <h3 class="text-center">Working with external resources</h3>
+            <h6 class="text-center text-secondary">Json (JavaScript Object Notation)</h6>
+        </div>
+        <div class="col-lg-6 col-sm-12 p-2">
+            <div class="background-content-one">
+                <h5>API (Application Proggramming Interface)</h5>
+                <ul class="list">
+                    <li>Making calls to external resources</li>
+                    <li>Retrieving external data</li>
+                    <li>Working with the JSON data structure</li>
+                    <li>Building data-driven applications</li>
+                </ul>
+                <P></P>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 p-2">
+            <div class="background-content-two">
+                <h5></h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="row m-0 p-0">
+        <div class="col-12 background-title p-5 m-0 mb-2 mt-5">
+            <h3 class="text-center">Consumming APIs with javascript</h3>
+            <h6 class="text-secondary text-center">URL (Uniform resource locator)</h6>
+        </div>
+        <div class="col-lg-6 col-sm-12 p-2 m-0">
+            <div class="background-content-two">
+                <h5></h5>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-6 p-2 m-0">
+            <div class=" d-flex justify-content-center background-content-one">
+                <img width="565px" height="322px" src="assets/images/common-http-status-codes.png">
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+    <script src="assets/javascript/javascript.js"></script>
+</body>
+
+</html>
